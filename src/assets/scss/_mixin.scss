@@ -1,0 +1,146 @@
+@mixin transition($time) {
+  -webkit-transition: all $time ease-out 0s;
+  -moz-transition: all $time ease-out 0s;
+  -ms-transition: all $time ease-out 0s;
+  -o-transition: all $time ease-out 0s;
+  transition: all $time ease-out 0s;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+  transform: $value;
+}
+
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+
+@mixin box-sizing($value) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  box-sizing: $value;
+}
+
+@mixin animation($value) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -o-animation: $value;
+  animation: $value;
+}
+
+@mixin animation-delay($value) {
+  -webkit-animation-delay: $value;
+  -moz-animation-delay: $value;
+  -o-animation-delay: $value;
+  animation-delay: $value;
+}
+
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
+// Placeholder Mixins
+@mixin placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+@mixin transition-all() {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+@mixin background-cover() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  border-color: $border;
+  background-color: $background;
+  &:focus,
+  &.focus {
+    color: $color;
+    border-color: darken($border, 25%);
+    background-color: darken($background, 10%);
+  }
+  &:hover {
+    color: $color;
+    border-color: darken($border, 12%);
+    background-color: darken($background, 10%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    border-color: darken($border, 12%);
+    background-color: darken($background, 10%);
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      border-color: darken($border, 25%);
+      background-color: darken($background, 17%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      border-color: $border;
+      background-color: $background;
+    }
+  }
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+@mixin heading-font {
+  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+@mixin body-font {
+  font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+@mixin alt-font {
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

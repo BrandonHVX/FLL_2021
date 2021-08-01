@@ -1,0 +1,92 @@
+#mainNav {
+  border-color: fade-out($gray-darker, 0.95);
+  background-color: rgba(255, 255, 255, 0);
+  @include transition-all;
+  @include heading-font;
+
+  .navbar-toggler {
+    font-size: 42px;
+    padding: 8px 10px;
+    color: white;
+    border: none;
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        font-size: 11px;
+        @include alt-font;
+        &.active {
+          color: $theme-primary !important;
+          background-color: transparent;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+      > a,
+      > a:focus {
+        color: $gray-darker;
+        &:hover {
+          color: $theme-primary;
+        }
+      }
+    }
+  }
+
+  &.navbar-shrink {
+    border-color: fade-out($gray-darker, 0.9);
+    background-color: rgba(0, 0, 0, 0.81);
+    .navbar-brand {
+      color: $gray-darker;
+      &:hover,
+      &:focus {
+        color: $theme-primary;
+      }
+    }
+    .navbar-nav > li > a,
+    .navbar-nav > li > a:focus {
+      color: $gray-darker;
+      &:hover {
+        color: $theme-primary;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    border-color: transparent;
+
+    background-color: transparent;
+
+    .navbar-nav > li > a,
+    .navbar-nav > li > a:focus {
+      color: fade-out(white, 0.3);
+      &:hover {
+        color: white;
+      }
+    }
+    &.navbar-shrink {
+      border-color: fade-out($gray-darker, 0.9);
+      background-color: rgb(255, 255, 255);
+      .navbar-brand-scroll {
+        color: $gray-darker;
+        &:hover,
+        &:focus {
+          color: $theme-primary;
+        }
+      }
+      .navbar-brand {
+        color: $gray-darker;
+        &:hover,
+        &:focus {
+          color: $theme-primary;
+        }
+      }
+      .navbar-nav > li > a,
+      .navbar-nav > li > a:focus {
+        color: $gray-darker;
+        &:hover {
+          color: $theme-primary;
+        }
+      }
+    }
+  }
+}

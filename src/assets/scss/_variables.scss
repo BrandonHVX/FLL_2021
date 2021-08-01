@@ -1,0 +1,39 @@
+// Font Family
+$ssp: 'Source Sans Pro', sans-serif;
+$nuns: 'Nunito Sans', sans-serif;
+
+// Colors ---------------
+$primary-color: #fa0404;
+$secondary-color: #7e0503;
+$text-color: #616161;
+$text-color-light: #fffefecb;
+$orange: rgb(228, 80, 0);
+$white: #fff;
+$black: #000;
+$soft-gery: #f5f5f5;
+
+// Responsive Variables
+$xxl: '(min-width: 1600px)';
+$xl: '(max-width: 1599px)';
+$lg: '(max-width: 1199px)';
+$md: '(max-width: 991px)';
+$sm: '(max-width: 767px)';
+$xsm: '(max-width: 575px)';
+$tiny: '(max-width: 399px)';
+
+$theme-color-2: rgba(233, 1, 1, 0.687);
+$theme-color-1: rgb(152, 4, 4);
+$theme-primary: #fdcc52;
+$theme-secondary: #ff9900;
+$theme-tertiary: #ff0112;
+$red: rgb(186, 3, 3);
+$gray-base: rgb(18, 17, 17);
+$gray-darker: lighten($gray-base, 13.5%); // #222
+$gray-dark: lighten($gray-base, 20%); // #333
+$gray: lighten($gray-base, 33.5%); // #555
+$gray-light: lighten($gray-base, 46.7%); // #777
+$gray-lighter: lighten($gray-base, 93.5%); // #eee
+
+$brand-twitter: #1da1f2;
+$brand-facebook: #3b5998;
+$brand-google-plus: #dd4b39;
