@@ -1,12 +1,11 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import { Helmet } from "react-helmet";
 
-import Layout from 'components/Layout';
-import Container from 'components/Container';
+import Container from "components/Container";
 
 const SecondPage = () => {
   return (
-    <Layout pageName="two">
+    <div>
       <Helmet>
         <title>Page Two</title>
       </Helmet>
@@ -14,7 +13,7 @@ const SecondPage = () => {
         <h1>Page Two</h1>
         <p>Welcome to page 2</p>
       </Container>
-    </Layout>
+    </div>
   );
 };
 

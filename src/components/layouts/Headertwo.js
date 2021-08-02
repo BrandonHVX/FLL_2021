@@ -1,10 +1,10 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import { Link } from 'gatsby';
-import Navmenu from './Navmenu';
-import OffCanvas from './Offcanvas';
-import classNames from 'classnames';
-import Scroll from './Scroll';
-import logo from '../../assets/img/fast-logo-white.png';
+import React, { Fragment, useEffect, useState } from "react";
+import { Link } from "gatsby";
+import Navmenu from "./Navmenu";
+import OffCanvas from "./Offcanvas";
+import classNames from "classnames";
+import Scroll from "./Scroll";
+import logo from "../../assets/img/fast-logo-white.png";
 
 export default () => {
   const [classmethod, setClassmethod] = useState(false);
@@ -14,14 +14,14 @@ export default () => {
 
   useEffect(() => {
     window.addEventListener(
-      'resize',
+      "resize",
       () => {
         setIsMobile(window.innerWidth < 991);
       },
       false
     );
     window.addEventListener(
-      'load',
+      "load",
       () => {
         setIsMobile(window.innerWidth < 991);
       },
@@ -29,9 +29,9 @@ export default () => {
     );
     // Sticky header
     window.addEventListener(
-      'scroll',
+      "scroll",
       () => {
-        setIsTop(window.scrollY > 110);
+        setIsTop(window.scrollY > 10);
       },
       false
     );
@@ -49,8 +49,8 @@ export default () => {
     setTogglemethod(!togglemethod);
   };
 
-  const mobileactive = isMobile ? 'breakpoint-on' : '';
-  const stickyheader = isTop ? 'sticky-on' : '';
+  const mobileactive = isMobile ? "breakpoint-on" : "";
+  const stickyheader = isTop ? "sticky-on" : "";
 
   return (
     <Fragment>
@@ -121,8 +121,8 @@ export default () => {
               </div>
               {/* Main Menu */}
               <div
-                className={classNames('nav-menu d-lg-flex align-items-center', {
-                  'menu-on': togglemethod,
+                className={classNames("nav-menu d-lg-flex align-items-center", {
+                  "menu-on": togglemethod
                 })}
               >
                 {/* Navbar Close Icon */}
@@ -157,11 +157,13 @@ export default () => {
                       </Scroll>
                     </li>
                     <li>
-                      <Scroll type="id" element="careers">
-                        <a className="nav-link" href="#download">
-                          Careers
-                        </a>
-                      </Scroll>
+                      <Link
+                        to="/careers/"
+                        className="nav-link"
+                        href="#download"
+                      >
+                        Careers
+                      </Link>
                     </li>
                     <li>
                       <Scroll type="id" element="faq">
@@ -169,7 +171,7 @@ export default () => {
                           FAQ
                         </a>
                       </Scroll>
-                    </li>{' '}
+                    </li>{" "}
                     <li>
                       <Scroll type="id" element="contact">
                         <a className="nav-link" href="#download">
@@ -219,8 +221,8 @@ export default () => {
                 </div> */}
                 {/* Navbar Toggler */}
                 <div
-                  className={classNames('navbar-toggler', {
-                    active: togglemethod,
+                  className={classNames("navbar-toggler", {
+                    active: togglemethod
                   })}
                   onClick={toggleClass}
                 >
@@ -234,13 +236,13 @@ export default () => {
         </div>
       </header>
       <div
-        className={classNames('offcanvas-wrapper', {
-          'show-offcanvas': classmethod,
+        className={classNames("offcanvas-wrapper", {
+          "show-offcanvas": classmethod
         })}
       >
         <div
-          className={classNames('offcanvas-overly', {
-            'show-overly': classmethod,
+          className={classNames("offcanvas-overly", {
+            "show-overly": classmethod
           })}
           onClick={removeClass}
         />
