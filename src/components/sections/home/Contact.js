@@ -1,18 +1,90 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { Form, Col, Button, Accordion, Card } from 'react-bootstrap';
-
-import illustration from '../../../assets/img/illustration/man-with-earth-02.png';
 
 export default () => {
   return (
-    <section className="quote-section ">
+    <section className="contact-section boxed-style-with-map" id="contact">
       <div className="container">
-        <div className="contact-form grey-bg">
-          <div className="row no-gutters justify-content-center">
-            <div className="col-10">
-              <div className="section-title text-center mb-40">
-                <h2 className="title">Don’t Hesited To Contact Us</h2>
+        <div className="contact-inner mt-negative grey-bg">
+          <div className="row no-gutters">
+            <div className="col-lg-6">
+              <div className="contact-map">
+                <iframe
+                  title="map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12443.304349994934!2d-90.47308360478846!3d38.76769270385693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df2e3783c26227%3A0xe9de03933d5a4134!2sEarth%20City%2C%20MO!5e0!3m2!1sen!2sus!4v1626151185499!5m2!1sen!2sus"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  aria-hidden="false"
+                  tabIndex={0}
+                />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="contact-form">
+                <div className="section-title left-border mb-30">
+                  <span className="title-tag">Drop A Message</span>
+                  <h2 className="title">Don’t Hesited To Contact Us</h2>
+                </div>
+                <form action="#">
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="input-group mb-30">
+                        <input
+                          type="text"
+                          placeholder="Your Full Name"
+                          required
+                        />
+                        <span className="icon">
+                          <i className="far fa-user-circle" />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <div className="input-group mb-30">
+                        <input
+                          type="email"
+                          placeholder="Your Email Address"
+                          required
+                        />
+                        <span className="icon">
+                          <i className="far fa-envelope-open" />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <div className="input-group select mb-30">
+                        <select required>
+                          <option value={0}>Subject</option>
+                          <option value={1}>Creative Idea</option>
+                          <option value={2}>Relationship</option>
+                          <option value={3}>Business Strategy</option>
+                          <option value={4}>Productivity</option>
+                          <option value={5}>It Solutions</option>
+                          <option value={5}>Product Design</option>
+                        </select>
+                        <span className="icon">
+                          <i className="far fa-angle-down" />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <div className="input-group textarea mb-30">
+                        <textarea
+                          placeholder="Write Message"
+                          defaultValue={''}
+                          required
+                        />
+                        <span className="icon">
+                          <i className="far fa-pencil" />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <button type="submit" className="main-btn">
+                        Send Message
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
