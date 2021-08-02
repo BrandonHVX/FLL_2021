@@ -63,7 +63,13 @@ const Form = () => {
   return (
     <div>
       <h1> Sample Form </h1>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
         <input type="hidden" name="form-name" value="contact" />
         <div className="form-inputs">
           <label htmlFor="name" className="form-label">
