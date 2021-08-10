@@ -29,11 +29,6 @@ export default () => {
             </div>
           ))}
         </div>
-        <div className="view-btn text-center mt-60">
-          <Link to="/service" className="main-btn">
-            View All Jobs
-          </Link>
-        </div>
       </div>
     </section>
   );

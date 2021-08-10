@@ -1,18 +1,18 @@
-import React from 'react';
-import { Accordion, Card, Button } from 'react-bootstrap';
+import React from "react";
+import { Accordion, Card, Button } from "react-bootstrap";
 
-import Fastfaq from '../../../assets/img/fast-faq.jpg';
-import circleimg from '../../../assets/img/faq-circle.png';
+import Fastfaq from "../../../assets/img/fast-faq.jpg";
+import circleimg from "../../../assets/img/faq-circle.png";
 
 export default () => {
   return (
     <section
-      className="faq-section  skill-section section-gap with-illustration with-shape "
+      className="faq-section section-gap with-illustration with-shape  "
       id="faq"
     >
-      <div className="container">
-        <div className="faq-illustration-img">
-          <img src={Fastfaq} alt="illustration" width={675} />
+      <div className="container grey-bg ">
+        <div className="faq-illustration-img ">
+          <img src={Fastfaq} alt="illustration" />
         </div>
         <div className="row justify-content-lg-end justify-content-center">
           <div className="col-lg-6 col-md-10">
@@ -86,7 +86,7 @@ export default () => {
         </div>
         <div
           className="circle-img"
-          style={{ backgroundImage: 'url(' + circleimg + ')' }}
+          style={{ backgroundImage: "url(" + circleimg + ")" }}
         />
       </div>
     </section>

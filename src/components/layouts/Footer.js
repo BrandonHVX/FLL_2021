@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from "react";
+import { Link } from "gatsby";
 
-import logo from '../../assets/img/fast-logo-white.png';
-import shape1 from '../../assets/img/lines/01.png';
-import shape2 from '../../assets/img/lines/02.png';
+import logo from "../../assets/img/fast-logo-white.png";
+import shape1 from "../../assets/img/lines/01.png";
+import shape2 from "../../assets/img/lines/02.png";
 
-import img1 from '../../assets/img/instagram/01.jpg';
-import img2 from '../../assets/img/instagram/02.jpg';
-import img3 from '../../assets/img/instagram/03.jpg';
-import img4 from '../../assets/img/instagram/04.jpg';
-import img5 from '../../assets/img/instagram/05.jpg';
-import img6 from '../../assets/img/instagram/06.jpg';
+import img1 from "../../assets/img/instagram/01.jpg";
+import img2 from "../../assets/img/instagram/02.jpg";
+import img3 from "../../assets/img/instagram/03.jpg";
+import img4 from "../../assets/img/instagram/04.jpg";
+import img5 from "../../assets/img/instagram/05.jpg";
+import img6 from "../../assets/img/instagram/06.jpg";
 
 const instapost = [
   { img: img1 },
@@ -18,14 +18,14 @@ const instapost = [
   { img: img3 },
   { img: img4 },
   { img: img5 },
-  { img: img6 },
+  { img: img6 }
 ];
 
 export default () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth"
     });
   };
 
@@ -39,19 +39,19 @@ export default () => {
                 <h4 className="widget-title">Quick Links</h4>
                 <ul>
                   <li>
-                    <Link to="#">Company History</Link>
+                    <Link to="#">About Us</Link>
                   </li>
                   <li>
-                    <Link to="#">Latest News &amp; Blog</Link>
+                    <Link to="#">Solutions</Link>
                   </li>
                   <li>
-                    <Link to="#">Popular Services</Link>
+                    <Link to="#">Company Profile</Link>
                   </li>
                   <li>
-                    <Link to="#">Business &amp; Consulting</Link>
+                    <Link to="#">Careers</Link>
                   </li>
                   <li>
-                    <Link to="#">Financial Planning</Link>
+                    <Link to="#">FAQ</Link>
                   </li>
                 </ul>
               </div>
@@ -74,7 +74,7 @@ export default () => {
                     </Link>
                   </li>
                   <li>
-                    {' '}
+                    {" "}
                     <i className="far fa-map-marker-alt" /> PO Box 2477 St.
                     Louis MO 63032 suite 106
                   </li>

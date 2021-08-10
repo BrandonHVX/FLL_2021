@@ -8,7 +8,7 @@ import Content from "../components/sections/careers/Content";
 import Form from "../components/sections/home/Form";
 export default () => {
   return (
-    <Fragment>
+    <div>
       <MetaTags>
         <title>Finsa | Careers</title>
         <meta name="description" content="#" />
@@ -23,6 +23,6 @@ export default () => {
         </div>
       </section>
       <Footer />
-    </Fragment>
+    </div>
   );
 };

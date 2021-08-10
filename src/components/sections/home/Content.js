@@ -27,10 +27,9 @@ export default () => {
       <Service />
       {/* <Video /> */}
       {/* <Features /> */}
-      <Statics /> <Faq />
+      <Statics />
       <Whyus />
       {/* <Counter /> */}
-      <Team />
       {/* <Skills /> */}
       {/* <Testimonials /> */}
       <section className="client-section mb-5">

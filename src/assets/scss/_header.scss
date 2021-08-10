@@ -108,9 +108,9 @@ header {
             position: relative;
 
             &::after {
-              font-family: 'Font Awesome 5 Pro';
+              font-family: "Font Awesome 5 Pro";
               font-weight: 400;
-              content: '\f107';
+              content: "\f107";
               position: absolute;
               right: 5px;
               top: 51%;
@@ -459,7 +459,7 @@ header {
     }
 
     &::before {
-      content: '';
+      content: "";
       left: 0;
       top: 0;
       background-color: #ff4a17;
@@ -600,7 +600,7 @@ header {
         li {
           &,
           a {
-            color: $text-color-light;
+            color: $white;
           }
 
           a:hover {
@@ -611,7 +611,7 @@ header {
 
       .social-links li {
         a {
-          color: #7d91a0;
+          color: $white;
         }
       }
     }
@@ -708,7 +708,7 @@ header {
 
         &::before,
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           bottom: 0;
@@ -794,7 +794,7 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
-    content: '';
+    content: "";
     background: $secondary-color;
     opacity: 0.65;
     z-index: -2;
@@ -914,7 +914,7 @@ header {
         }
 
         &::after {
-          content: '>';
+          content: ">";
           position: absolute;
           top: 50%;
           transform: translateY(-50%);

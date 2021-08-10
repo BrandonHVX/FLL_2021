@@ -115,7 +115,7 @@ export default () => {
             <div className={`nav-container ${mobileactive}`}>
               {/* Site Logo */}
               <div className="site-logo">
-                <Link to="/hometwo">
+                <Link to="/">
                   <img src={logo} alt="Logo" />
                 </Link>
               </div>
