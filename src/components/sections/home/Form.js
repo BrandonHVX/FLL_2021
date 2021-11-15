@@ -89,22 +89,27 @@ const Form = () => {
 
   // console.log(errors, formData)
   return (
-    <section className="" id="contact">
+    <section className="form" id="contact">
       <div className="container">
+        <div className="pt-2">
+          <div className="pb-5">
+            <h2> Driver Job Inquiry Form </h2>
+          </div>
+        </div>
         <form
           onSubmit={handleSubmit}
           name="contact"
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          class="row g-3 needs-validation"
+          class="row g-3 needs-validation grey-bg "
           novalidate
         >
           <input type="hidden" name="form-name" value="contact" />
 
           <div class="col-md-4">
             <label for="validationCustom01" class="form-label">
-              First name
+              First Name
             </label>
 
             <input
@@ -119,7 +124,7 @@ const Form = () => {
           </div>
           <div class="col-md-4">
             <label for="validationCustom02" class="form-label">
-              Last name
+              Last Name
             </label>
             <input
               type="text"
@@ -236,33 +241,19 @@ const Form = () => {
           </div>
 
           <div class="col-12">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="invalidCheck"
-                required
-              />
-              <label class="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
+            <p>
+              <label>
+                Resume Upload (Required): <input type="file" name="picture" />
               </label>
-              <div class="invalid-feedback">
-                You must agree before submitting.
-              </div>
-            </div>
+            </p>
           </div>
-          <div class="col-12">
-            <button class="btn btn-primary" type="submit">
-              Submit form
+
+          <div class="col-12 ">
+            <button class="btn btn-primary m-2" type="submit">
+              Submit Form
             </button>
           </div>
         </form>
-        <div className=" grey-bg">
-          <div className="m-2">
-            <h6> Personal Information</h6>
-          </div>
-        </div>
       </div>
     </section>
   );

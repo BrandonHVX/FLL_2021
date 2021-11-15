@@ -293,6 +293,12 @@
       onChange={handleChange}
     />
     {errors.zip && <p>{errors.zip}</p>}
+
+    <p>
+      <label>
+        Dog’s Picture: <input type="file" name="picture" />
+      </label>
+    </p>
   </div>
   {/* /////// */}
 

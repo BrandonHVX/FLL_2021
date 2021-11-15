@@ -13,7 +13,7 @@ export default () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Finsa | Careers</title>
+        <title>Fastlane Logistics | Careers</title>
         <meta name="description" content="#" />
       </MetaTags>
       <Header />
