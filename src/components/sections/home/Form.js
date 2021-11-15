@@ -9,37 +9,16 @@ const Form = () => {
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
+    sex: "",
     dob: "",
-    social: "",
+    experience: "",
     email: "",
+    phone: "",
     street: "",
     aptno: "",
-    sex: "",
     city: "",
     state: "",
-    zip: "",
-    phone: "",
-    message: "",
-    school: "",
-    diploma: "",
-    employer: "",
-    employersupervisor: "",
-    employerphone: "",
-    startdate: "",
-    enddate: "",
-    jobduties: "",
-    jobexp: "",
-    cpuexp: "",
-    manageexp: "",
-    accidents: "",
-    accidentsexp: "",
-    violations: "",
-    violationsexp: "",
-    refname: "",
-    refphone: "",
-    refemail: "",
-    signature: "",
-    date: ""
+    zip: ""
   });
 
   const handleChange = e => {
@@ -92,37 +71,16 @@ const Form = () => {
           setFormData({
             firstname: "",
             lastname: "",
+            sex: "",
             dob: "",
-            social: "",
+            experience: "",
             email: "",
+            phone: "",
             street: "",
             aptno: "",
-            sex: "",
             city: "",
             state: "",
-            zip: "",
-            phone: "",
-            message: "",
-            school: "",
-            diploma: "",
-            employer: "",
-            employersupervisor: "",
-            employerphone: "",
-            startdate: "",
-            enddate: "",
-            jobduties: "",
-            jobexp: "",
-            cpuexp: "",
-            manageexp: "",
-            accidents: "",
-            accidentsexp: "",
-            violations: "",
-            violationsexp: "",
-            refname: "",
-            refphone: "",
-            refemail: "",
-            signature: "",
-            date: ""
+            zip: ""
           })
         )
         .catch(error => alert(error));
@@ -133,372 +91,176 @@ const Form = () => {
   return (
     <section className="" id="contact">
       <div className="container">
-        <div className=" grey-bg  ">
+        <form
+          onSubmit={handleSubmit}
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          class="row g-3 needs-validation"
+          novalidate
+        >
+          <input type="hidden" name="form-name" value="contact" />
+
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">
+              First name
+            </label>
+
+            <input
+              type="text"
+              className="form-control"
+              name="firstname"
+              id="firstname"
+              value={formData.firstname}
+              onChange={handleChange}
+            />
+            {errors.firstname && <p>{errors.firstname}</p>}
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">
+              Last name
+            </label>
+            <input
+              type="text"
+              name="lastname"
+              className="form-control"
+              id="lastname"
+              value={formData.lastname}
+              onChange={handleChange}
+            />
+            {errors.lastname && <p>{errors.lastname}</p>}
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">
+              Sex
+            </label>
+            <select
+              type="text"
+              name="sex"
+              className="form-control form-select"
+              id="sex"
+              value={formData.sex}
+              onChange={handleChange}
+              id="inputGroupSelect01"
+              id="validationCustom04"
+              required
+            >
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+            </select>
+            <div class="invalid-feedback"></div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="validationCustom03" class="form-label">
+              Date of Birth
+            </label>
+            <input
+              type="text"
+              name="dob"
+              className="form-control"
+              id="dob"
+              value={formData.dob}
+              onChange={handleChange}
+            />
+            {errors.dob && <p>{errors.dob}</p>}
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom03" class="form-label">
+              Email
+            </label>
+            <input
+              type="text"
+              name="email"
+              className="form-control"
+              id="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            {errors.email && <p>{errors.email}</p>}
+            <div class="invalid-feedback">Please select a valid state.</div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom05" class="form-label">
+              Phone
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom05"
+              required
+            />
+            <div class="invalid-feedback">Please provide a valid zip.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">
+              Industry Experience
+            </label>
+            <select
+              type="text"
+              name="experience"
+              className="form-control form-select"
+              id="experience"
+              value={formData.experience}
+              onChange={handleChange}
+              id="inputGroupSelect01"
+              id="validationCustom04"
+              required
+            >
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option value="1">Box Truck Driver</option>
+              <option value="2">Long Haul Driver w/CDL</option>
+              <option value="3">Warehouse/Shipping</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">
+              Years of Experience
+            </label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">
+                Choose...
+              </option>
+              <option value="1">1-3 years</option>
+              <option value="2">3-5 years</option>
+              <option value="3">5+ Years</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid state.</div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="invalidCheck"
+                required
+              />
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">
+              Submit form
+            </button>
+          </div>
+        </form>
+        <div className=" grey-bg">
           <div className="m-2">
             <h6> Personal Information</h6>
-            <form
-              onSubmit={handleSubmit}
-              name="contact"
-              method="post"
-              class="row g-3"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <div className="col-md-3  ">
-                <label htmlFor="firstname" className="form-label">
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  name="firstname"
-                  id="firstname"
-                  value={formData.firstname}
-                  onChange={handleChange}
-                />
-                {errors.firstname && <p>{errors.firstname}</p>}
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="lastname" className="form-label">
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  name="lastname"
-                  id="lastname"
-                  value={formData.lastname}
-                  onChange={handleChange}
-                />
-                {errors.lastname && <p>{errors.lastname}</p>}
-              </div>
-              <div className="col-md-2">
-                <label htmlFor="sex" className="form-label">
-                  Sex
-                </label>
-                <select
-                  type="text"
-                  name="sex"
-                  id="sex"
-                  value={formData.sex}
-                  onChange={handleChange}
-                  class="form-select"
-                  id="inputGroupSelect01"
-                >
-                  <option selected>Select</option>
-                  <option value="1">Male</option>
-                  <option value="2">Female</option>
-                </select>
-                {errors.sex && <p>{errors.sex}</p>}
-              </div>
-              <div className="col-md-3">
-                <label htmlFor="social" className="form-label">
-                  Date Of Birth
-                </label>
-                <input
-                  type="text"
-                  name="dob"
-                  id="dob"
-                  value={formData.dob}
-                  onChange={handleChange}
-                />
-                {errors.dob && <p>{errors.dob}</p>}
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="social" className="form-label">
-                  Social Security Number
-                </label>
-                <input
-                  type="text"
-                  name="social"
-                  id="social"
-                  value={formData.social}
-                  onChange={handleChange}
-                />
-                {errors.social && <p>{errors.social}</p>}
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  Email
-                </label>
-                <input
-                  type="text"
-                  name="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-                {errors.email && <p>{errors.email}</p>}
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  Phone
-                </label>
-                <input
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                />
-                {errors.phone && <p>{errors.phone}</p>}
-              </div>
-              <div className="col-md-10">
-                <label htmlFor="email" className="form-label">
-                  Street Address
-                </label>
-                <input
-                  type="text"
-                  name="street"
-                  id="street"
-                  value={formData.street}
-                  onChange={handleChange}
-                />
-                {errors.street && <p>{errors.street}</p>}
-              </div>
-              <div className="col-md-2">
-                <label htmlFor="email" className="form-label">
-                  Apt #
-                </label>
-                <input
-                  type="text"
-                  name="aptno"
-                  id="aptno"
-                  value={formData.aptno}
-                  onChange={handleChange}
-                />
-                {errors.aptno && <p>{errors.aptno}</p>}
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  City
-                </label>
-                <input
-                  type="text"
-                  name="city"
-                  id="city"
-                  value={formData.city}
-                  onChange={handleChange}
-                />
-                {errors.city && <p>{errors.city}</p>}
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  State
-                </label>
-                <input
-                  type="text"
-                  name="state"
-                  id="state"
-                  value={formData.state}
-                  onChange={handleChange}
-                />
-                {errors.state && <p>{errors.state}</p>}
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  Zip
-                </label>
-                <input
-                  type="text"
-                  name="zip"
-                  id="zip"
-                  value={formData.zip}
-                  onChange={handleChange}
-                />
-                {errors.zip && <p>{errors.zip}</p>}
-              </div>
-              {/* /////// */}
-              <div className="row mt-5">
-                <h6> Education</h6>
-              </div>
-              <div className="col-md-3">
-                <label htmlFor="firstname" className="form-label">
-                  School
-                </label>
-                <input
-                  type="text"
-                  name="school"
-                  id="school"
-                  value={formData.school}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-2">
-                <label htmlFor="sex" className="form-label">
-                  Diploma
-                </label>
-                <input
-                  type="text"
-                  name="diploma"
-                  id="diploma"
-                  value={formData.diploma}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="row mt-5">
-                <h6> Employment History</h6>
-              </div>
-              <div className="col-md-2">
-                <label htmlFor="sex" className="form-label">
-                  Employer
-                </label>
-                <input
-                  type="text"
-                  name="employer"
-                  id="employer"
-                  value={formData.employer}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="dob" className="form-label">
-                  employersupervisor
-                </label>
-                <input
-                  type="text"
-                  name="employersupervisor"
-                  id="employersupervisor"
-                  value={formData.employersupervisor}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="social" className="form-label">
-                  employerphone
-                </label>
-                <input
-                  type="text"
-                  name="employerphone"
-                  id="employerphone"
-                  value={formData.employerphone}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  startdate
-                </label>
-                <input
-                  type="text"
-                  name="startdate"
-                  id="startdate"
-                  value={formData.startdate}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  enddate
-                </label>
-                <input
-                  type="text"
-                  name="enddate"
-                  id="enddate"
-                  value={formData.enddate}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-10">
-                <label htmlFor="email" className="form-label">
-                  jobduties
-                </label>
-                <input
-                  type="text"
-                  name="jobduties"
-                  id="jobduties"
-                  value={formData.jobduties}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-2">
-                <label htmlFor="email" className="form-label">
-                  jobexp
-                </label>
-                <input
-                  type="text"
-                  name="jobexp"
-                  id="jobexp"
-                  value={formData.jobexp}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  cpuexp
-                </label>
-                <input
-                  type="text"
-                  name="cpuexp"
-                  id="cpuexp"
-                  value={formData.cpuexp}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  manageexp
-                </label>
-                <input
-                  type="text"
-                  name="manageexp"
-                  id="manageexp"
-                  value={formData.manageexp}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  accidents
-                </label>
-                <input
-                  type="text"
-                  name="accidents"
-                  id="accidents"
-                  value={formData.accidents}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  accidentsexp
-                </label>
-                <input
-                  type="text"
-                  name="accidentsexp"
-                  id="accidentsexp"
-                  value={formData.accidentsexp}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  violations
-                </label>
-                <input
-                  type="text"
-                  name="violations"
-                  id="violations"
-                  value={formData.violations}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-md-4">
-                <label htmlFor="email" className="form-label">
-                  violationsexp
-                </label>
-                <input
-                  type="text"
-                  name="violationsexp"
-                  id="violationsexp"
-                  value={formData.violationsexp}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <button type="submit" className="form-input-btn">
-                Send
-              </button>
-            </form>
           </div>
         </div>
       </div>
